@@ -23,8 +23,8 @@
 
     </head>
     <body>
-        <!-- .container （固定宽度）或 .container-fluid （100% 宽度） -->
-        <div id="box" class="container i-container">
+        <!-- .container （固定宽度）或 .container-fluid （100% 宽度） style最后渲染，优先级最高-->
+        <div id="box" class="container-fluid i-container" style="padding-left: 0px;padding-right: 0px;">
            
             <div class="i-header">
                 <div style="display:inline-block;width:20%;">
@@ -40,8 +40,8 @@
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                 </div>
                 
-                
             </div>
+
             <div class="i-body">
 
                 <div id="demo" class="carousel slide" data-ride="carousel">
@@ -76,13 +76,33 @@
                    
                   </div>
 
-                <!-- <p>轮播</p>
-                <P>秒杀专场</P> -->
+                  <div class="i-mid2">
+                      <!-- <div>
+                        <img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg">
+                      </div>
+                      <div>
+                        <img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg">
+                      </div>
+                      <div>
+                        <img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg">
+                      </div> -->
+                  </div>
+
+                
             </div>
 
             <div class="i-footer">
-                底部
+              <div style="display: inline-block;width: 30%;">
+                  <span class="glyphicon glyphicon-home">首页</span>
+              </div>
+              <div style="display: inline-block;width: 30%;">
+                  <span class="glyphicon glyphicon-home">首页</span>
+              </div>
+              <div style="display: inline-block;width: 30%;">
+                  <span class="glyphicon glyphicon-home">首页</span>
+              </div>
             </div>
+
         </div>
     </body>
     <!-- vue -->

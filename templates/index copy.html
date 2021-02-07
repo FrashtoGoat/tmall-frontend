@@ -34,7 +34,7 @@
                     <span class="glyphicon glyphicon glyphicon-bell" ></span>
                 </div>
                 <div style="display:inline-block;width: 55%;text-align: center;">
-                    <span>{{title}}</span>
+                    <span >{{msg}}</span>
                 </div>
                 <div style="display:inline-block;width: 10%;">
                     <span class="glyphicon glyphicon-search"></span>
@@ -47,7 +47,6 @@
 
             <div class="i-body">
 
-              <div id="index" v-if="showIndex">
 
                 <div id="demo" class="carousel slide" data-ride="carousel">
  
@@ -200,42 +199,21 @@
 
                   </div>
 
-              </div>
-
-
-              <div id="mine" v-if="showMine">
-                 <div class="m1">
-                    头像
-                     昵称 会员等级 积分 个人设置
-                 </div>
-                 <div class="m2">
-                  我的订单 待付款 待收货
-                 </div>
-                 <div class="m3">
-                  我的足迹
-                  地址管理
-                 </div>
-              </div>
-
-
-              <div id="product" v-if="showProduct">
-                  productPage
-              </div>
                 
             </div>
 
             <div class="i-footer">
 
-              <div class="i-footer-part" @click="showPage(0)">
+              <div class="i-footer-part" @click="dosomething('1')">
                   <div class="glyphicon glyphicon-home" style="top:30%;">首页</div>
               </div>
 
-              <div class="i-footer-part" @click="showPage(1)">
+              <div class="i-footer-part" @click="dosomething('2')">
                 <div class="glyphicon glyphicon-th-large" style="top:30%;">分类</div>
               </div>
 
 
-              <div class="i-footer-part" @click="showPage(2)">
+              <div class="i-footer-part" @click="dosomething('3')">
                <div class="glyphicon glyphicon-user" style="top:30%;">我的</div>
               </div>
 

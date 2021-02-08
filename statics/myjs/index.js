@@ -38,5 +38,13 @@
             
         },
 
+        //mine
+        turnToMineDetail(){
+            alert("test vue");
+        },
+
+
+        //product
+
      }
  });

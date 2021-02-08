@@ -8,6 +8,7 @@
         <title>index</title>
 
         <link href="./../statics/mycss/index.css" rel="stylesheet">
+        <link href="./../statics/mycss/mine.css" rel="stylesheet">
 
         <link href="./../statics/css/bootstrap/v4/bootstrap.css" rel="stylesheet">
          <script src="./../statics/js/jquery.min.js"></script>
@@ -204,14 +205,37 @@
 
 
               <div id="mine" v-if="showMine">
-                 <div class="m1">
-                    头像
-                     昵称 会员等级 积分 个人设置
+                 <div class="mine1">
+                    <div class="mini1-core">
+                      <div style="float: left;">
+                        <img src="../statics/image/headImg/sanli2.jpg" class="round_icon"/>
+                      </div>
+                       <div class="nickName" >
+                           <p>三笠阿克曼</p>
+                           <p>黄金会员</p>
+                       </div>
+                       <div class="turnMine" @click="turnToMineDetail">
+                          <
+                       </div>
+                    </div>
+                    <!-- 头像 昵称 会员等级 积分 个人设置 -->
                  </div>
-                 <div class="m2">
-                  我的订单 待付款 待收货
+                 <div class="mine2">
+                   
+                     <div class="mine2-unit">
+                       <span class="glyphicon glyphicon-list" style="font-size: 40px;"></span>
+                       <p>我的订单</p>
+                     </div>
+                     <div class="mine2-unit">
+                      <span class="glyphicon glyphicon-unchecked" style="font-size: 40px;"></span>
+                      <p>待付款</p>
+                    </div>
+                    <div class="mine2-unit">
+                      <span class="glyphicon glyphicon-inbox" style="font-size: 40px;"></span>
+                      <p>待收货</p>
+                    </div>
                  </div>
-                 <div class="m3">
+                 <div class="mine3">
                   我的足迹
                   地址管理
                  </div>
@@ -244,4 +268,5 @@
           </div>
     </body>
     <script src="./../statics/myjs/index.js"></script>
+    <script src="./../statics/myjs/mine.js"></script>
 </html>

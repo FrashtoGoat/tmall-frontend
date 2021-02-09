@@ -42,6 +42,21 @@
         turnToMineDetail(){
             alert("test vue");
         },
+        toFootSteps(){
+            alert("toFootSteps");
+        },
+        toAddressManager(){
+            alert("toAddressManager");
+        },
+        toMyOrder(){
+            console.log("toMyOrder");
+        },
+        toWaitPay(){
+            console.log("toWaitPay");
+        },
+        toWaitReceive(){
+            console.log("toWaitReceive");
+        },
 
 
         //product

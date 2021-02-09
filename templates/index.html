@@ -222,22 +222,34 @@
                  </div>
                  <div class="mine2">
                    
-                     <div class="mine2-unit">
+                     <div class="mine2-unit" @click="toMyOrder">
                        <span class="glyphicon glyphicon-list" style="font-size: 40px;"></span>
                        <p>我的订单</p>
                      </div>
-                     <div class="mine2-unit">
+                     <div class="mine2-unit" @click="toWaitPay">
                       <span class="glyphicon glyphicon-unchecked" style="font-size: 40px;"></span>
                       <p>待付款</p>
                     </div>
-                    <div class="mine2-unit">
+                    <div class="mine2-unit" @click="toWaitReceive">
                       <span class="glyphicon glyphicon-inbox" style="font-size: 40px;"></span>
                       <p>待收货</p>
                     </div>
                  </div>
+
                  <div class="mine3">
-                  我的足迹
-                  地址管理
+                   <div class="mine3-block-warp">
+                    <div class="mine3-block" @click="toFootSteps">
+                      <span class="glyphicon glyphicon-leaf">我的足迹</span>
+                      <span style="margin-right: 20px;float: right;color: gray;"> < </span>
+                     </div>
+                   </div>
+                   <div class="mine3-block-warp">
+                    <div class="mine3-block" @click="toAddressManager">
+                      <span class="glyphicon glyphicon-map-marker" >地址管理</span>
+                      <span style="margin-right: 20px;float: right;color: gray;"> < </span>
+                     </div>
+                   </div>
+                   
                  </div>
               </div>
 

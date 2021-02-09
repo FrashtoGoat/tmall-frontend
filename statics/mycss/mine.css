@@ -49,8 +49,29 @@
 }
 
 .mine2-unit{
-    float: left;
+   float: left;
    margin:10px 15px;
    text-align: center;
-  
+}
+
+.mine3{
+    margin: 40px 0px;
+    /* border-bottom: solid 1px gray; */
+    text-align: left;
+    font-size: 25px;
+    clear: both;
+}
+
+.mine3-block-warp{
+    width: 100%;
+    border-bottom:solid 1px gray;
+    border-top:solid 1px gray;
+    height: 50px;
+}
+
+.mine3-block{
+    display: block;
+    margin: 10px 20px;
+    /* float: left;   */
+    width: 90%;
 }

@@ -2,7 +2,7 @@
     background-color:darkslategrey;
     height: 250px;
     width: 100%;
-    padding: 50px 30px;
+    padding: 50px 20px;
 }
 
 .mini1-core{
@@ -24,10 +24,10 @@
 
 .nickName{
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 40px;
     /* background-color: white; */
-    width: 30%;
+    /* width: 30%; */
     text-align: center;
 
     

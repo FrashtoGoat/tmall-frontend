@@ -23,7 +23,7 @@
          
           <!-- vue -->
         <script src="./../statics/js/vue.js"></script>
-        
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     </head>
     <body>
@@ -93,7 +93,7 @@
                      
                      <div style="width: 48%;display: inline-block;text-align: right;">
                        <p style="line-height:20px;">本场结束剩余</p>
-                       <p style="line-height:20px;">00:20:56</p>
+                       <p style="line-height:20px;">{{hour}}:{{min}}:{{sec}}</p>
                      </div>
 
                     </div>
@@ -279,6 +279,8 @@
 
           </div>
     </body>
+    <script src="./../statics/myjs/common.js"></script>
     <script src="./../statics/myjs/index.js"></script>
     <script src="./../statics/myjs/mine.js"></script>
+   
 </html>

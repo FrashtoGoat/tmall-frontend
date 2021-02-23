@@ -13,6 +13,16 @@
          min:'00',
          sec:'00',
 
+         //更多推荐翻页
+         recommandPageNum:1,
+         recommandPageSize:5,
+         recommandList:[],
+
+        //  items: [
+        //     // { message: 'Foo',pic:12 },
+        //     // { message: 'Bar',pic:13}
+        //  ],
+
 
      },
      methods:{
@@ -86,6 +96,30 @@
             });
         },
 
+        //获取推荐
+        getRecommands(){
+            let page={
+                "recommandStatus":1,
+                "pageNum":this.recommandPageNum,
+                "pageSize":this.recommandPageSize
+            };
+            axios.post(product_url+'product/getProduct', page
+            )
+            .then(function (response) {
+                //console.log(response);
+                this.recommandPageNum++;
+                //this.recommandList=response.data.data.list;
+                //TODO 还没弄明白app.$data.就能渲染v-for
+                app.$data.recommandList=response.data.data.list;
+                
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        },
+
+
         //秒杀活动
         findFlashSale(){
 
@@ -122,8 +156,14 @@
         },
 
      },
+
+     created:function(){
+        this.getRecommands();
+     },
+
      mounted: function() {
-        this.getProducts();
+        //this.getProducts();
+        //this.getRecommands();
         this.findFlashSale();
         //倒计时
         this.countTime();

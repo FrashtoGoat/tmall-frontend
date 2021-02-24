@@ -111,7 +111,7 @@
                 //this.recommandList=response.data.data.list;
                 //TODO 还没弄明白app.$data.就能渲染v-for
                 app.$data.recommandList=response.data.data.list;
-                
+                //console.log(app.$data.recommandList);
 
             })
             .catch(function (error) {
@@ -154,6 +154,11 @@
             setTimeout(this.countTime,1000);  
   
         },
+
+        jumpDetailPage(product){
+            //console.log(product);
+            window.location.href=product_url+"";
+        }
 
      },
 

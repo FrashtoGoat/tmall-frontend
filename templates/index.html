@@ -140,20 +140,20 @@
                          <table>
 
 
-                          <tr v-for="product in recommandList" v-bind:key="product.id">
+                          <tr v-for="product in recommandList" v-bind:key="product.id" style="cursor: pointer;" @click="jumpDetailPage(product)">
                             <td style="height: 130px;width: 100px;">
                              <!-- <img src=product.pic style="width: 90%;height: 80%;"/> -->
                              <img :src="product.pic" style="width: 90%;height: 80%;"/>
                             </td>
                             <td>
                               <div>
-                               <span></span>
+                               <span>{{product.name}}</span>
                               </div>
                               <div>
-                               <span></span>
+                               <span>{{product.subTitle}}</span>
                               </div>
                               <div>
-                               <span>商品价格</span>
+                               <span>{{product.price}}元</span>
                               </div>
                             </td>
 
@@ -176,44 +176,6 @@
                              </td>
 
                            </tr> -->
-
-                           <!-- <tr>
-                            <td style="height: 130px;width: 100px;">
-                             <img src="../statics/image/recommend/02.jpg" style="width: 90%;height: 80%;"/>
-                            </td>
-                            <td>
-                              <div>
-                               <span>商品名称</span>
-                              </div>
-                              <div>
-                               <span>商品简介</span>
-                              </div>
-                              <div>
-                               <span>商品价格</span>
-                              </div>
-                            </td>
-
-                          </tr>
-
-
-
-                          <tr>
-                            <td style="height: 130px;width: 100px;">
-                             <img src="../statics/image/recommend/03.jpg" style="width: 90%;height: 80%;"/>
-                            </td>
-                            <td>
-                              <div>
-                               <span>商品名称</span>
-                              </div>
-                              <div>
-                               <span>商品简介</span>
-                              </div>
-                              <div>
-                               <span>商品价格</span>
-                              </div>
-                            </td>
-
-                          </tr> -->
 
                          </table>
 

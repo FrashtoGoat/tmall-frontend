@@ -5,12 +5,13 @@ let app = new Vue({
     data:{
         title:"商品详情",
         product:{},
+        count:1,
 
     },
 
     methods: {
         findProduct(productId){
-            axios.get(product_url+'product/findProduct/'+productId)
+            axios.get(protal_url+'product/findProduct/'+productId)
             .then(function (response) {
               console.log(response);
               //this.product=response.data.data;
@@ -22,17 +23,68 @@ let app = new Vue({
         },
         createOrder(productId){
             console.log(productId);
+            
         },
         addProductToCart(productId){
+            alert("暂未开发");
             console.log(productId);
         },
         toMyCart(){
+            alert("暂未开发");
             console.log("toMyCart");
-        }
-    },
+        },
 
+        add:function(count){
+            this.count++;
+         },
+        subtract:function(count){
+            if (this.count<=0){
+                alert('受不了啦，宝贝不能再减少啦')
+                this.count=0;
+            }else {
+                this.count-=1;
+            }
+        },
+        payNow(){
+            console.log("payNow");
+            
+        },
+        createOrder(){
+            console.log("createOrder");
+            let orderExtendVO={
+                order:{
+
+                },
+                orderItems:[
+                    {
+                        productId:this.product.id,
+                        productQuantity:this.count,
+                    },   
+                ],
+                product:this.product,
+                user:{
+                    //TODO 
+                    id:"1",
+                }
+            };
+            axios.post(protal_url+'order/createOrder', orderExtendVO
+            )
+            .then(function (response) {
+            console.log(response);
+            })
+            .catch(function (error) {
+            console.log(error);
+            });
+        },
+    },
     mounted() {
         let productId=1;
         this.findProduct(productId);
     },
+    computed: {
+        computeSumPrice: function () {
+            return this.product.price*this.count;
+        }
+    },
+
 })

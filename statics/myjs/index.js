@@ -86,7 +86,7 @@
                 "pageNum":1,
                 "pageSize":10
             };
-            axios.post(product_url+'product/getProduct', page
+            axios.post(protal_url+'product/getProduct', page
             )
             .then(function (response) {
             console.log(response);

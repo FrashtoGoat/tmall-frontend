@@ -10,7 +10,7 @@ let app = new Vue({
 
     methods: {
         findProduct(productId){
-            axios.get(product_url+'product/findProduct/'+productId)
+            axios.get(protal_url+'product/findProduct/'+productId)
             .then(function (response) {
               console.log(response);
               //this.product=response.data.data;
@@ -22,11 +22,14 @@ let app = new Vue({
         },
         createOrder(productId){
             console.log(productId);
+            
         },
         addProductToCart(productId){
+            alert("暂未开发");
             console.log(productId);
         },
         toMyCart(){
+            alert("暂未开发");
             console.log("toMyCart");
         }
     },

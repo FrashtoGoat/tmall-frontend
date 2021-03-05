@@ -53,15 +53,19 @@ let app = new Vue({
             console.log("createOrder");
             let orderExtendVO={
                 order:{
-
+                    // 0-> 待付款；1-> 待发货；2-> 已发货；3-> 已完成；4-> 已关闭；5-> 无效订单
+                    status: 0,
                 },
-                orderItems:[
-                    {
-                        productId:this.product.id,
-                        productQuantity:this.count,
-                    },   
+                // orderItems:[
+                //     {
+                //         productId:this.product.id,
+                //         productQuantity:this.count,
+                //     },   
+                // ],
+                products:[
+                    this.product,
                 ],
-                product:this.product,
+                //product:this.product,
                 user:{
                     //TODO 
                     id:"1",

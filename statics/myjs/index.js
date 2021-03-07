@@ -77,7 +77,9 @@
 
 
         //product
-
+        scrollPic(){
+            alert("暂未开发");
+        },
 
         //
         getProducts(){
@@ -103,7 +105,7 @@
                 "pageNum":this.recommandPageNum,
                 "pageSize":this.recommandPageSize
             };
-            axios.post(product_url+'product/getProduct', page
+            axios.post(protal_url+'product/getProduct', page
             )
             .then(function (response) {
                 //console.log(response);

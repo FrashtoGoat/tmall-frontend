@@ -35,51 +35,49 @@ let app = new Vue({
         },
 
         add:function(count){
-            this.count++;
+            if(this.count>=10){
+                alert('每个人最多买10件');
+            }else{
+                this.count++;
+            }
          },
         subtract:function(count){
-            if (this.count<=0){
+            if (this.count<0){
                 alert('受不了啦，宝贝不能再减少啦')
-                this.count=0;
             }else {
-                this.count-=1;
+                this.count--;
             }
         },
         payNow(){
-            console.log("payNow");
-            
+            this.handleOrder(1);
         },
         createOrder(){
-            console.log("createOrder");
+            this.handleOrder(0);
+            
+        },
+        handleOrder(orderState){
+            this.product.quantity=this.count;
             let orderExtendVO={
                 order:{
                     // 0-> 待付款；1-> 待发货；2-> 已发货；3-> 已完成；4-> 已关闭；5-> 无效订单
-                    status: 0,
+                    status: orderState,
                 },
-                // orderItems:[
-                //     {
-                //         productId:this.product.id,
-                //         productQuantity:this.count,
-                //     },   
-                // ],
                 products:[
                     this.product,
                 ],
-                //product:this.product,
-                user:{
-                    //TODO 
-                    id:"1",
-                }
+                user:user={
+                    id:1,
+                },
             };
             axios.post(protal_url+'order/createOrder', orderExtendVO
             )
             .then(function (response) {
-            console.log(response);
+                console.log(response);
             })
             .catch(function (error) {
-            console.log(error);
+                console.log(error);
             });
-        },
+        }
     },
     mounted() {
         let productId=1;

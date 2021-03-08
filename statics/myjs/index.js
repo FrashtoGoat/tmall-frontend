@@ -57,7 +57,7 @@
 
         //mine
         turnToMineDetail(){
-            alert("test vue");
+            alert("暂未开发");
         },
         toFootSteps(){
             alert("toFootSteps");
@@ -158,8 +158,7 @@
         },
 
         jumpDetailPage(product){
-            //console.log(product);
-            window.location.href=product_url+"";
+            window.location.href=protal_url+"";
         }
 
      },

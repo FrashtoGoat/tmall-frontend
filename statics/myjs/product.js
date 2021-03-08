@@ -1,5 +1,4 @@
 
-
 let app = new Vue({
     el:"#box",
     data:{
@@ -34,15 +33,15 @@ let app = new Vue({
             console.log("toMyCart");
         },
 
-        add:function(count){
+        add:function(){
             if(this.count>=10){
                 alert('每个人最多买10件');
             }else{
                 this.count++;
             }
          },
-        subtract:function(count){
-            if (this.count<0){
+        subtract:function(){
+            if (this.count<=1){
                 alert('受不了啦，宝贝不能再减少啦')
             }else {
                 this.count--;
